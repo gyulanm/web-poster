@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+body {
+  /* background:radial-gradient(circle at 50%, rgba(0, 26, 255, 0.36) 0%, rgba(0, 26, 255, 0.0108) 100% ); */
+  background: linear-gradient(to bottom, black 0%, blue 50%, black 100%);
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* min-height: 1369vh; */
+  margin: 0;
+  /* color: white; */
+  font-family: 'Electrolize', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.numeral {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.columns-wrapper p {
+  font-size: 18px;
+  margin: 0;
+
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.logo {
+  display: block;
+  width: 80vw;
+  margin-inline: auto;
+}
+
+.top {
+  position: relative;
+}
+
+.columns-wrapper {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  z-index: -1;
+}
+
+.columns-wrapper--top {
+  top: 0;
+}
+
+.columns-wrapper--bottom {
+  bottom: 0;
+  align-items: end;
+  column-gap: 15px;
+}
+
+.animation1 {
+  animation-name: animation1;
+}
+
+@keyframes animation1 {
+  0% {
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0;
+  }
+
+  40% {
+    color: #3142DE;
+  }
+
+  100% {
+    color: blue;
+    margin-top: -100px;
+  }
+}
+
+.animation2 {
+  animation-name: animation2;
+}
+
+@keyframes animation2 {
+  0% {
+    color: blue;
+  }
+
+  40% {
+    color: #3142DE;
+  }
+
+  100% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.animation3 {
+  animation-name: animation3;
+}
+
+@keyframes animation3 {
+  0% {
+    color: #3142DE;
+  }
+
+  40% {
+    color: blue;
+  }
+
+  100% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.animation-params-1 {
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.animation-params-2 {
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.animation-params-3 {
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+/*================================================================*/
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding: 65px;
+  box-sizing: border-box;
+  margin-block: 350px 40px;
+  margin-inline: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.btn-control {
+  width: 35vw;
+  max-width: 300px;
+}
+
+.btn-motion, .btn-traffic {
+  max-width: 200px;
+  display: none;
+}
+
+.btn-traffic {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  bottom: 0;
+}
+
+.btn-motion {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  top: 0;
+}
+
+.btn-switch {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: -95px;
+  transform: translateY(-50%);
+}
+
+.btn-color {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: -125px;
+  transform: translateY(-50%);
+}
+
+.button {
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+
+.bttb {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.btt3 {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+}
+
+.button1 {
+  position: relative;
+  min-height: 140vh;
+}
+
+.button1 * {
+  position: absolute;
+}
+
+/*================================================*/
+.bottom {
+  position: relative;
+  height: 500px;
+}
+
+.item {
+  width: 60px;
+}
+
+.text {
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.item img {
+  max-height: 80px;
+  animation-name: al1;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.item:nth-child(3n) img {
+  animation-duration: 5s;
+  animation-delay: 0;
+}
+
+.item:nth-child(5n+1) img {
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+.item .text p {
+  font-size: 10px;
+  width: 8px;
+  overflow-wrap: break-word;
+  animation-name: at1;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.item:nth-child(3n) .text p {
+  animation-duration: 3s;
+  animation-delay: 0;
+}
+
+.item:nth-child(5n+1) .text p {
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+@keyframes al1 {
+  from {
+    height: 100px;
+  }
+
+  to {
+    height: 50px;
+  }
+}
+
+@keyframes at1 {
+  from {
+    font-size: 10px;
+    width: 8px;
+  }
+
+  to {
+    font-size: 5px;
+    width: 4px;
+  }
+}
+
+
+/*================================================================*/
+/* для планшета */
+@media screen and (max-width: 1024px) { 
+  .top p {
+    font-size: 10px;
+  }
+
+  .logo {
+    top: 150px;
+  }
+
+  .buttons {
+    margin-top: 200px;
+  }
+
+  .btn-traffic {
+    transform: translateX(-50%) translateY(100%) scale(0.8);
+  }
+  
+  .btn-motion {
+    transform: translateX(-50%) translateY(-100%) scale(0.8);
+  }
+  
+  .btn-switch {
+    transform: translateY(-50%) scale(0.8);
+    left: -80px;
+  }
+  
+  .btn-color {
+    transform: translateY(-50%) scale(0.8);
+    right: -110px;
+  }    
+}
+
+/* для мобильного */
+@media screen and (max-width: 768px) {
+  .top p {
+    font-size: 5px;
+  }
+
+  .logo {
+    top: 50px;
+  }
+
+  .t2 {
+    font-size: 9px;
+    top:0;
+    width: 28vw;
+  }
+
+  .item .text p {
+    font-size: 8px;
+    width: 8px;
+  }
+
+  @keyframes at1 {
+    from {
+      font-size: 8px;
+      width: 6px;
+    }
+
+    to {
+      font-size: 5px;
+      width: 4px;
+    }
+  }
+
+  .buttons {
+    margin-block: 100px 15px;
+  }
+
+  .btn-traffic {
+    transform: translateX(-50%) translateY(100%) scale(0.5);
+  }
+  
+  .btn-motion {
+    transform: translateX(-50%) translateY(-100%) scale(0.5);
+  }
+  
+  .btn-switch {
+    transform: translateY(-50%) scale(0.5);
+    left: -70px;
+  }
+  
+  .btn-color {
+    transform: translateY(-50%) scale(0.5);
+    right: -95px;
+  }
+
+  .bottom {
+    height: 350px;
+  }
+}
